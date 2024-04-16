@@ -17,7 +17,23 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WS.sendRequestAndVerify(findTestObject('create_project/load_project'))
+Mobile.startExistingApplication('com.todoist')
 
-WS.sendRequest(findTestObject('create_project/create_project'))
+Mobile.tap(findTestObject('mobile/ImageButton-HamburgerMenu'), 0)
+
+Mobile.tap(findTestObject('Object Repository/mobile/ViewGroup-ShoppingList_project'), 0)
+
+Mobile.tap(findTestObject('Object Repository/mobile/ImageButton-add_plus_icon'), 0)
+
+Mobile.setText(findTestObject('Object Repository/mobile/EditText-Task_name'), 'cheese', 0)
+
+Mobile.setText(findTestObject('Object Repository/mobile/EditText-Description'), 'for baking nastar', 0)
+
+Mobile.tap(findTestObject('Object Repository/mobile/TextView-Due_date'), 0)
+
+Mobile.tap(findTestObject('Object Repository/mobile/TextView-Next_week'), 0)
+
+Mobile.tap(findTestObject('Object Repository/mobile/ImageView-Submit'), 0)
+
+WS.sendRequestAndVerify(findTestObject('API/check_task'))
 

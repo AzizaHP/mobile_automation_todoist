@@ -19,14 +19,22 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startExistingApplication('com.todoist')
 
-Mobile.tap(findTestObject('Object Repository/mobile_login/Button-Continue_with_email'), 0)
+Mobile.tap(findTestObject('mobile/Button-Continue_with_email'), 20)
 
-Mobile.setText(findTestObject('Object Repository/mobile_login/EditText-Email'), 'erikasnow99@gmail.com', 0)
+Mobile.setText(findTestObject('Object Repository/mobile/EditText-Email'), 'erikasnow99@gmail.com', 20)
 
-Mobile.tap(findTestObject('Object Repository/mobile_login/Button-CONTINUE_WITH_EMAIL (1)'), 0)
+Mobile.tap(findTestObject('mobile/Button-CONTINUE_WITH_EMAIL (1)'), 20)
 
-Mobile.setEncryptedText(findTestObject('Object Repository/mobile_login/EditText-Password'), 'iZat7NiuvkwZOfTgc9SU/g==', 
-    0)
+Mobile.setEncryptedText(findTestObject('Object Repository/mobile/EditText-Password'), 'iZat7NiuvkwZOfTgc9SU/g==', 
+    30)
 
-Mobile.tap(findTestObject('Object Repository/mobile_login/Button-LOG_IN'), 0)
+Mobile.tap(findTestObject('mobile/Button-LOG_IN'), 20)
+
+Mobile.getText(findTestObject('Object Repository/mobile/TextView - Today'), 20)
+
+Mobile.waitForElementPresent(findTestObject('mobile/ImageButton-HamburgerMenu'), 20)
+
+Mobile.tap(findTestObject('mobile/ImageButton-HamburgerMenu'), 20)
+
+Mobile.verifyElementText(findTestObject('mobile/TextView - Shopping List'), 'Shopping List')
 
