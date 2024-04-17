@@ -1,13 +1,13 @@
 This repo is build using Katalon Studio Arm64 and Android Studio for android emulator.
 
-For Todoist android application is on file androidapp > com.todoist.apk (application id is com.todoist)
+Open project with Katalon Studio then follow this steps:
 
 Part 1: To create test project via API:
 - Run **tc-create_project** under Test Cases file.
   - Each API files is under Object Repository > API
 
 Part 2: After new project created, run the android emulator then run this part.
-You can use android emulator here https://github.com/AzizaHP/My_Application or you can use your own emulator. I use Device Manager Pixel 8 Pro VanillaIceCream.
+You can use android emulator here https://github.com/AzizaHP/My_Application or you can use your own emulator. I use Device Manager Pixel 8 Pro VanillaIceCream. Make sure on your emulator has installed Todoist application. For Todoist android application is on file androidapp > com.todoist.apk (application id is com.todoist)
 - Run **tc-login_todoist**
   - It contains mobile automation for login to todoist app and check the new project was created.
 
