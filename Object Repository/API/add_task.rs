@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>check_task</name>
+   <name>add_task</name>
    <tag></tag>
-   <elementGuidId>0d336083-4175-4d54-b443-0b3dddbab372</elementGuidId>
+   <elementGuidId>33a35e4d-343f-4b4f-8028-1a9052dc8fce</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -16,25 +16,37 @@
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
    </authorizationRequest>
-   <autoUpdateContent>true</autoUpdateContent>
-   <connectionTimeout>0</connectionTimeout>
+   <autoUpdateContent>false</autoUpdateContent>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\&quot;content\&quot;: \&quot;Buy Milk\&quot;, \&quot;project_id\&quot;: \&quot;2331902206\&quot;}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+      <value>application/json</value>
+      <webElementGuid>0518ccca-b45d-4456-b2be-93a7d55ed7a6</webElementGuid>
+   </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Authorization</name>
       <type>Main</type>
       <value>Bearer 9c1c50ec35e7917d59d73ff04c9f3714212dad8e</value>
-      <webElementGuid>a880c9cf-8fa5-44b5-aee8-2781ae6276e3</webElementGuid>
+      <webElementGuid>9c874854-6d66-4ffd-ac01-0fe96acc4b3d</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>9.4.0</katalonVersion>
-   <maxResponseSize>0</maxResponseSize>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
-   <restRequestMethod>GET</restRequestMethod>
+   <restRequestMethod>POST</restRequestMethod>
    <restUrl>https://api.todoist.com/rest/v2/tasks</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
@@ -42,7 +54,7 @@
    <soapRequestMethod></soapRequestMethod>
    <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <socketTimeout>0</socketTimeout>
+   <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -56,10 +68,6 @@ import internal.GlobalVariable as GlobalVariable
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
-ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-//ResponseObject response = WS.sendRequest(findTestObject('Object Repository/TextView-Task_Cheese'))
-WS.verifyElementText(response, '[0].content', 'Cheese')
-//WS.getElementPropertyValue(response, &quot;&quot;)</verificationScript>
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

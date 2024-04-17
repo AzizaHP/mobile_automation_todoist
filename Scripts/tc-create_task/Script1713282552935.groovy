@@ -25,7 +25,7 @@ Mobile.tap(findTestObject('Object Repository/mobile/ViewGroup-ShoppingList_proje
 
 Mobile.tap(findTestObject('Object Repository/mobile/ImageButton-add_plus_icon'), 0)
 
-Mobile.setText(findTestObject('Object Repository/mobile/EditText-Task_name'), 'cheese', 0)
+Mobile.setText(findTestObject('Object Repository/mobile/EditText-Task_name'), 'Cheese', 0)
 
 Mobile.setText(findTestObject('Object Repository/mobile/EditText-Description'), 'for baking nastar', 0)
 
@@ -34,6 +34,8 @@ Mobile.tap(findTestObject('Object Repository/mobile/TextView-Due_date'), 0)
 Mobile.tap(findTestObject('Object Repository/mobile/TextView-Next_week'), 0)
 
 Mobile.tap(findTestObject('Object Repository/mobile/ImageView-Submit'), 0)
+
+Mobile.tap(findTestObject('mobile/ViewGroup - Shopping List header'), 0)
 
 WS.sendRequestAndVerify(findTestObject('API/check_task'))
 
