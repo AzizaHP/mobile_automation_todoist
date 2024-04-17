@@ -16,4 +16,5 @@ Part 3: To create task under new project with mobile automation and check the ne
   - It contains mobile automation for create new task under new project created and check the task is created by API.
   - This part is continued running from Part 2, not running from beginning login to the app.
 
-If you want to running all parts, run the test suites **mobile_automation_todoist**. Find the file Test Suites > mobile_automation_todoist
+If you want to running all parts at once, run the test suites **mobile_automation_todoist**. Find the file Test Suites > mobile_automation_todoist
+*note: if failed at first, running again.
